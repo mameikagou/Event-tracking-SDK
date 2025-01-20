@@ -1,4 +1,4 @@
-import { Track } from './index';
+import type { Track } from '@/core/track';
 
 interface ErrorInfo {
     message: string;
