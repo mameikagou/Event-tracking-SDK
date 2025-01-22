@@ -42,7 +42,7 @@ class BlankScreenDetector {
 	}
 
 	private detectBlankScreen() {
-		// 检测逻辑...
+		// TODO：检测逻辑
 		return false
 	}
 }
