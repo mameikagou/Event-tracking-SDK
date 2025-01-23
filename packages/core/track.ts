@@ -15,7 +15,7 @@ export class Track {
     // 定时上报
     private timer: ReturnType<typeof setInterval>;
 
-    private errorTracker: ErrorTracker;
+    private errorTracker: ErrorTracker; 
 
     static DEFAULT_CONFIG = {
         uploadUrl: 'https://analytics.example.com/collect',
