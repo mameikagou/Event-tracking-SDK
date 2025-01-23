@@ -121,3 +121,10 @@ const subscribe = (eventName: string, callback: Function) => {
 ### performance
 
 使用Performance API
+
+
+
+
+### 其他的
+
+- 前后版本的性能对比
