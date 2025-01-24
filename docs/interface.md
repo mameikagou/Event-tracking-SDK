@@ -42,14 +42,19 @@ export interface BaseResponse<T = any> {
 
 ### 需求列表
 
+目前的需求：
 - 用户登录，获取apikey
 - 简单的分项目展示： 就是用户的项目列表
 ![alt text](image.png)
 - SDK信息展示，展示用户使用引入了的，有效的SDK信息
-- 错误展示
-- 性能监控
-- 白屏监控
-- 用户行为监控
+- 错误展示 error.ts
+- 性能监控 performance.ts
+- 用户行为监控 userBehavior.ts
+
+
+后续再做的东西：
+- 白屏监控 whiteScreen.ts
+- 自定义事件监控 customEvent.ts
 
 #### SDK信息展示
 
@@ -79,7 +84,7 @@ export interface SDKInfo extends BaseResponse{
 // apikey 的安全性传递很有的说，这里先不考虑，先按照放在请求头里处理
 ```
 
-![alt text](image-1.png)
+![alt text](https://a1.qpic.cn/psc?/V12tfOgv0nps1J/bqQfVz5yrrGYSXMvKr.cqagCDVeklX9PNZ.rUJRzJ5MrUIf8tBoTyBNlAb5MiAoKzDnIdbJQTukjZuvkV5EetMDRfMYwGAmTpU*WyEZQ9yQ!/m&ek=1&kp=1&pt=0&bo=2gVWAtoFVgIWADA!&t=5&tl=3&vuin=1036279200&tm=1737680400&dis_t=1737683797&dis_k=df656874598b4a3a2fb0245c5b054fff&sce=60-4-3&rf=0-0)
 
 #### 错误监控
 
@@ -157,6 +162,23 @@ interface ErrorListResponse extends BaseResponse {
 }
 ```
 
-TODO： 后端数据库设计
+TODO： 后端数据库设计以及接口设计
+
+#### 性能监控
+performance.ts
+![alt text](image-5.png)
+
+#### 行为监控
+userBehavior.ts
+breadcrumbs.ts 
+
+描述就是，监控用户行为， 比如点击， 输入， 等等；
+
+一个觉得比较有意思的设计是，“用户行为栈”，意思是
+内容也许比较多，详情可以通过一个table里面嵌套一个modal来展示，其他的类似以下这个图；
+
+
+![alt text](image-4.png)
+
 
 ## SDK to 后端 接口
